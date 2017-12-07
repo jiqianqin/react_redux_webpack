@@ -9,8 +9,8 @@ import App from 'components/app/app';
 renderWithHotReload(App);
 
 if (module.hot) {
-    module.hot.accept('components/app/app', () => {
-        const NextApp = require('components/app/app').default;
+    module.hot.accept('./router/router', () => {
+        const NextApp = require('./router/router').default;
         renderWithHotReload(NextApp);
     });
 }

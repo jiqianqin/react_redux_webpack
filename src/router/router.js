@@ -10,21 +10,18 @@ import Loading from 'components/loading/loading';
 
 const createComponent = (component) => () => (
     <Bundle load={component}>
-        {
-            (Component) => Component ? <Component/> : <Loading/>
-        }
+        {(Component) => Component ? <Component/> : <Loading/>
+}
     </Bundle>
 );
 
 const getRouter = () => (
-    <Router>
-         <Switch>
-                <Route exact path="/" component={createComponent(Home)}/>
-                <Route path="/page1" component={createComponent(Page1)}/>
-                <Route path="/counter" component={createComponent(Counter)}/>
-                <Route path="/userinfo" component={createComponent(UserInfo)}/>
-            </Switch>
-    </Router>
+    <Switch>
+        <Route exact path="/" component={createComponent(Home)}/>
+        <Route path="/page1" component={createComponent(Page1)}/>
+        <Route path="/counter" component={createComponent(Counter)}/>
+        <Route path="/userinfo" component={createComponent(UserInfo)}/>
+    </Switch>
 );
 
 export default getRouter;
