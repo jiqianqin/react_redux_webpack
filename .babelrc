@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "es2015", //用于解析 ES6
+        "react", //用于解析 JSX
+        "stage-0" //用于解析 ES7 提案
+    ],
+    "plugins": [
+        "react-hot-loader/babel" // 热更替
+    ]
+}
