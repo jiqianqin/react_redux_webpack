@@ -11,10 +11,10 @@ const publicConfig = {
     devtool: 'cheap-module-source-map',
     module: {
         rules: [{
-            test: /\.css$/,
+            test: /\.(css|scss)$/,
             use: ExtractTextPlugin.extract({
                 fallback: "style-loader",
-                use: "css-loader"
+                use: ["css-loader", "postcss-loader"]
             })
         }]
     },

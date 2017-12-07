@@ -5,6 +5,8 @@
         "stage-0" //用于解析 ES7 提案
     ],
     "plugins": [
-        "react-hot-loader/babel" // 热更替
+        "react-hot-loader/babel", // 热更替
+        "transform-runtime" //将辅助函数“搬”到一个单独的模块 babel-runtime 中,这样做能减小项目文件的大小。
+        
     ]
 }
