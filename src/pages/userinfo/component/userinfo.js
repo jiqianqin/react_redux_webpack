@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getUserInfo} from "actions/userInfo";
+import {getUserInfo} from "../actions/userInfo";
 
 class UserInfo extends Component {
 
