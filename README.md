@@ -10,6 +10,13 @@ Welcome to the react_redux_webpack wiki!
 2. redux
 3. react-router
 4. es6
+### 分支 react_redux_webpack_js_scss 
+主要为js 语言，
+1. react 
+2. redux
+3. react-router
+4. es6
+5. scss
 
 ## 包含了以下功能：
 1. 路由（react-router）

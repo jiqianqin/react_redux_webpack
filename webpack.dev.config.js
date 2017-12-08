@@ -20,10 +20,12 @@ const devConfig = {
     module: {
         rules: [{
             test: /\.(css|scss)$/,
-            use: ["style-loader","css-loader", "postcss-loader"]
-        },{
-            test: /\.(scss)$/,
-            use: ["sass-loader"]
+            /**  1、将 JS 字符串生成为 style 节点 
+             *   2、将 CSS 转化成 CommonJS 模块
+             *   3、将 Sass 编译成 CSS
+             *   4、允许你使用未来的 CSS 特性
+             */
+            use: ["style-loader","css-loader","sass-loader", "postcss-loader"]
         }]
     },
     devServer: {
