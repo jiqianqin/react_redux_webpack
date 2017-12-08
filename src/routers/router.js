@@ -1,12 +1,12 @@
 import React from 'react';
-import Bundle from 'router/bundle';
+import Bundle from 'libs/bundle';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Home from 'bundle-loader?lazy&name=home!pages/home/home';
-import Page1 from 'bundle-loader?lazy&name=page1!pages/page1/page';
-import Counter from 'bundle-loader?lazy&name=counter!pages/couter/component/couter';
-import UserInfo from 'bundle-loader?lazy&name=userInfo!pages/userInfo/component/userInfo';
-import NotFound from 'bundle-loader?lazy&name=notFound!pages/notfound/notfound';
+import Home from 'bundle-loader?lazy&name=home!modules/home/home';
+import Page1 from 'bundle-loader?lazy&name=page1!modules/page1/page';
+import Counter from 'bundle-loader?lazy&name=counter!modules/couter/component/couter';
+import UserInfo from 'bundle-loader?lazy&name=userInfo!modules/userInfo/component/userInfo';
+import NotFound from 'bundle-loader?lazy&name=notFound!modules/notfound/notfound';
 import Loading from 'components/loading/loading';
 
 const createComponent = (component) => () => (

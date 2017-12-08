@@ -47,11 +47,11 @@ commonConfig = {
 
     resolve: {
         alias: {
-            pages: path.join(__dirname, 'src/pages'),
+            modules: path.join(__dirname, 'src/modules'),
             common: path.join(__dirname, 'src/common'),
             components: path.join(__dirname, 'src/components'),
             libs:path.join(__dirname, 'src/libs'),
-            router: path.join(__dirname, 'src/router'),
+            routers: path.join(__dirname, 'src/routers'),
             mock: path.join(__dirname, 'mock')
         }
     }

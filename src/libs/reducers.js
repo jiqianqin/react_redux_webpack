@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
-import counter from 'pages/couter/reducers/counter';
-import userInfo from 'pages/userinfo/reducers/userInfo';
+import counter from 'modules/couter/reducers/counter';
+import userInfo from 'modules/userinfo/reducers/userInfo';
 
 //组合多个reducers
 // export default function combineReducers(state = {}, action) {

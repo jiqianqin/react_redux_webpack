@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Nav from 'components/nav/nav';
-import MainRouter from 'router/router';
+import MainRouter from 'routers/router';
 
 export default class App extends Component {
     render() {
