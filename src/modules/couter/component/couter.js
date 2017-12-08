@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {increment, decrement, reset} from '../actions/counter';14
+import { hoc } from '../containers/couter';
 
 class Counter extends Component {
     render() {
@@ -26,6 +27,8 @@ class Counter extends Component {
         )
     }
 }
+
+const CounterHoc = hoc(Counter);
 const mapStateToProps = (state) => {
     return {
         counter: state.counter
@@ -54,4 +57,4 @@ const mapDispatchToProps = (dispatch) => {
  * 还有一个参数是mapDispatchToprops,就是把发射actions的方法，转为Props属性函数
  */
 //
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(CounterHoc);
