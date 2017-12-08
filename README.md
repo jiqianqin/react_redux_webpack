@@ -4,6 +4,8 @@ Welcome to the react_redux_webpack wiki!
 2. npm start
 
 ## 基础
+### 分支 react_redux_webpack_js 
+主要为js 语言，使用css的。
 1. react 
 2. redux
 3. react-router
