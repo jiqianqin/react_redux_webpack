@@ -7,11 +7,9 @@ export function increment() {
 }
 
 export function decrement() {
-	console.log("decrement");
 	return {type: DECREMENT};
 }
 
 export function reset() {
-	console.log("reset");
 	return {type: RESET};
 }
