@@ -4,6 +4,7 @@ import {increment, decrement, reset} from '../actions/counter';14
 
 class Counter extends Component {
     render() {
+        console.log(this.props);
         return (
             <div>
                 <div>当前计数为{this.props.counter.count}</div>
@@ -28,7 +29,8 @@ class Counter extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        counter: state.counter
+        counter: state.counter,
+        userInfo: state.userInfo
     }
 };
 
