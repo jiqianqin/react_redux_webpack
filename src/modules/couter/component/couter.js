@@ -5,6 +5,7 @@ import { hoc } from '../containers/couter';
 
 class Counter extends Component {
     render() {
+        console.log(this.props)
         return (
             <div>
                 <div>当前计数为{this.props.counter.count}</div>
@@ -57,4 +58,4 @@ const mapDispatchToProps = (dispatch) => {
  * 还有一个参数是mapDispatchToprops,就是把发射actions的方法，转为Props属性函数
  */
 //
-export default connect(mapStateToProps, mapDispatchToProps)(CounterHoc);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
