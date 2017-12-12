@@ -18,6 +18,7 @@ Welcome to the react_redux_webpack wiki!
 4. es6
 5. scss
 
+
 ## 包含了以下功能：
 1. 路由（react-router）
 2. css集成PostCSS，css编译，图片编译，文件压缩

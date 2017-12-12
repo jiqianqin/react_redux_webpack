@@ -2,7 +2,7 @@ import {createStore,applyMiddleware} from 'redux';
 // 为了让action创建函数除了返回action对象外，还可以返回函数，我们需要引用redux-thunk
 // import thunkMiddleware from 'redux-thunk';
 // 中间键
-import promiseMiddleware from 'common/middleware/promise';
+import promiseMiddleware from '../common/middleware/promise';
 import combineReducers from './reducers';
 
 

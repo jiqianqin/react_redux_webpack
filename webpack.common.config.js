@@ -2,11 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
-commonConfig = {
+const commonConfig = {
     entry: {
         app: [
             "babel-polyfill",
-            path.join(__dirname, 'src/index.js')
+            path.join(__dirname, './src/index.tsx')
         ],
         vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
     },
@@ -20,6 +20,10 @@ commonConfig = {
         rules: [{
             test: /\.js$/,
             use: ['babel-loader?cacheDirectory=true'],
+            include: path.join(__dirname, 'src')
+        },{
+            test: /\.tsx$/,
+            use: ['ts-loader'],
             include: path.join(__dirname, 'src')
         }, {
             test: /\.(png|jpg|gif)$/,
@@ -46,14 +50,15 @@ commonConfig = {
     ],
 
     resolve: {
-        alias: {
-            modules: path.join(__dirname, 'src/modules'),
-            common: path.join(__dirname, 'src/common'),
-            components: path.join(__dirname, 'src/components'),
-            libs:path.join(__dirname, 'src/libs'),
-            routers: path.join(__dirname, 'src/routers'),
-            mock: path.join(__dirname, 'mock')
-        }
+        extensions: [".tsx", ".ts", ".js"],        
+        // alias: {
+        //     modules: path.join(__dirname, 'src/modules'),
+        //     common: path.join(__dirname, 'src/common'),
+        //     components: path.join(__dirname, 'src/components'),
+        //     libs:path.join(__dirname, 'src/libs'),
+        //     routers: path.join(__dirname, 'src/routers'),
+        //     mock: path.join(__dirname, 'mock')
+        // }
     }
 };
 
