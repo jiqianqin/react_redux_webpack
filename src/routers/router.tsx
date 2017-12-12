@@ -8,13 +8,6 @@ const Counter = require("bundle-loader?lazy&name=counter!../modules/couter/compo
 const UserInfo = require("bundle-loader?lazy&name=userInfo!../modules/userInfo/component/userInfo");
 const NotFound = require("bundle-loader?lazy&name=notFound!../modules/notfound/notfound");
 
-// const createComponent = (component?:any) => () => (
-//     <Bundle load={component}>
-//         {(Component) => Component ? <Component/> : <Loading/>
-// }
-//     </Bundle>
-// );
-
 const getRouter = () => (
     <Switch>
         <Route exact path="/" component={bundle(Home)}/>

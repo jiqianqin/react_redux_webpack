@@ -12,12 +12,12 @@ if (MOCK) {
 
 renderWithHotReload(App);
 
-// if (module.hot) {
-//     module.hot.accept('./routers/router', () => {
-//         const NextApp = require('./routers/router').default;
-//         renderWithHotReload(NextApp);
-//     });
-// }
+if (module.hot) {
+    module.hot.accept('./routers/router', () => {
+        const NextApp = require('./routers/router').default;
+        renderWithHotReload(NextApp);
+    });
+}
 
 function renderWithHotReload(RootElement) {
     ReactDom.render(
